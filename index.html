@@ -1,45 +1,27 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
+  <!-- <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-  <style>
-    body.no-sidebar .sidebar,
-    body.no-sidebar .sidebar-toggle {
-    display: none !important;
-    }
-    body.no-sidebar .content {
-    left: 0px !important;
-     }   
-  </style>
- </head>
-<body class="no-sidebar">
-    <nav>
-    <a href="#/">Test 1</a>
-    <a href="#/_navbar.md/">Test 2</a>
-    </nav>
+</head>
+<body>
   <div id="app"></div>
   <script>
-    window.$docsify = {
-     // ...
-     // load from _navbar.md
-     loadNavbar: true,
-     // load from _navbar.md
-     loadNavbar: '_navbar.md'
-      
-     loadSidebar: false
-      
-      themeable: {
-          readyTransition : true, // default
-          responsiveTables: true  // default
-                 }
-  };   
+  window.$docsify = {
+  
+    loadNavbar: true,
+    loadSidebar: true,
+    alias: {
+      '/.*/_sidebar.md': '/_sidebar.md'
+     }
 
+ }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
- </body>
+</body>
 </html>
